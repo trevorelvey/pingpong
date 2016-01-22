@@ -19,4 +19,14 @@ var pingPong = function (inputNum) {
   } else {
     return true;
   }
-};
+}
+
+$(document).ready(function() {
+  $("form#Number").submit(function(event) {
+    var userCount = parseInt($("input#listUp").val());
+    listUp(userCount);
+    $("#numberName").empty().append(numList.join(" , "));
+    $("#result").show();
+    event.preventDefault();
+  });
+});
