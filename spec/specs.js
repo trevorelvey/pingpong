@@ -1,6 +1,6 @@
-describe('listCount', function() {
+describe('listUp', function() {
   it("lists numbers to a given point", function () {
-    expect(listNum(5)).to.equal(1, 2, 3, 4, 5)
+    expect(listUp(5)).to.eql([1, 2, 3, 4, 5])
   });
 });
 

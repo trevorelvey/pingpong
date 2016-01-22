@@ -1,11 +1,11 @@
-var listNum = [];
-var listCount = function(listCountUpTo) {
+var numList = [];
+var listUp = function(maxNum) {
   var i;
-  for (i = 1; i <= listCountUpTo; i ++) {
-    listNum.push(i);
+  for (i = 1; i <= maxNum; i ++) {
+    numList.push(i);
   }
-  return listNum;
-};
+  return numList;
+}
 
 var pingPong = function (inputNum) {
   if (isNaN(inputNum) === true) {
