@@ -5,10 +5,6 @@ describe('listUp', function() {
 });
 
 describe('pingPong', function() {
-  it("is not a number", function () {
-   expect(pingPong("abc")).to.equal(false)
-   });
-
    it("is a multiple of 15", function () {
      expect(pingPong(45)).to.equal("pingpong")
    });
@@ -21,9 +17,3 @@ describe('pingPong', function() {
      expect(pingPong(42)).to.equal("ping")
    });
  });
-
-describe('pongMaker', function () {
-  it("lists numbers with ping and pong included", function () {
-    expect(pongMaker(5)).to.eql([1, 2, ping, 4, pong])
-  });
-});

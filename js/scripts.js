@@ -7,21 +7,17 @@ var listUp = function(maxNum) {
   return numList;
 }
 
-var pingPong = function (listItem) {
-  if (isNaN(listItem) === true) {
-    return false
-  } else if (listItem % 15 === 0) {
+var pingPong = function (inputNum) {
+  if (inputNum % 15 === 0) {
     return "pingpong";
-  } else if (listItem % 5 === 0) {
+  } else if (inputNum % 5 === 0) {
     return "pong";
-  } else if (listItem % 3 === 0) {
+  } else if (inputNum % 3 === 0) {
     return "ping";
   } else {
     return true;
   }
 }
-
-// var pongMaker = function ()
 
 $(document).ready(function() {
   $("form#Number").submit(function(event) {
