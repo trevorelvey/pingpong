@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!-- Stylesheets -->
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+      <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+      <!-- Scripts -->
+      <script src="js/jquery-1.12.0.js"></script>
+      <script src="js/scripts.js"></script>
+      <!-- Title -->
+      <title>PING PONG!</title>
+    </head>
+    <body>
+      <div class="container">
+        <!-- Form -->
+        <h1>Count Up</h1>
+        <form id="Numbers">
+          <label for="CountUp">Count up to this number</label>
+          <input id="CountUp" type="text">
+          <label for="IncrementUp">Increment by this number</label>
+          <input id="IncrementUp" type="text">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        <!-- Reset Button -->
+        <form id="Reset">
+          <button type="submit" class="btn btn-warning">Reset</button>
+        </form>
+        <!-- Result -->
+        <div id="result">
+          <p>Your numbers are: <span id="numberName"></span>.
+        </div>
+      </div>
+    </body>
+  </html>
