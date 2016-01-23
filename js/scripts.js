@@ -1,3 +1,4 @@
+// BDD
 var pingPong = function(listUp) {
   var array = []
   for (var i = 1; i <= listUp; i ++) {
@@ -15,7 +16,7 @@ var pingPong = function(listUp) {
   return array;
 };
 
-
+// UI
 $(document).ready(function() {
   $("form").submit(function(event) {
     $("li").remove();
