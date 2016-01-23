@@ -1,30 +1,27 @@
-var numList = [];
-var listUp = function(maxNum) {
-  var i;
-  for (i = 1; i <= maxNum; i ++) {
-    numList.push(i);
+var pingPong = function(listUp) {
+  var array = []
+  for (var i = 1; i <= listUp; i ++) {
+    if (i % 3 === 0) {
+      array.push("ping");
+    } else {
+      array.push(i);
+    }
   }
-  return numList;
-}
+  console.log(array);
+  return array;
+};
 
-var pingPong = function (inputNum) {
-  if (inputNum % 15 === 0) {
-    return "pingpong";
-  } else if (inputNum % 5 === 0) {
-    return "pong";
-  } else if (inputNum % 3 === 0) {
-    return "ping";
-  } else {
-    return true;
-  }
-}
 
 $(document).ready(function() {
-  $("form#Number").submit(function(event) {
-    var userCount = parseInt($("input#listUp").val());
-    listUp(userCount);
-    $("#numberName").empty().append(numList.join(" , "));
-    $("#result").show();
+  $("form").submit(function(event) {
+    $("li").remove();
+    var listUp = parseInt($("input#listUp").val());
+    var pingPongOutput = pingPong(listUp);
+    pingPongOutput.forEach(function(i) {
+      $("#pingPong").append("<li>" + i + "</li>");
+    });
+    $(".result").show();
+
     event.preventDefault();
   });
 });
